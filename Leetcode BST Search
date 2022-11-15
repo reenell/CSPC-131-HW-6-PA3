@@ -12,18 +12,22 @@
 class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
+        // if there is no root, nullptr is returned
         if (root == NULL) {
             return nullptr;
         }
         
+        // if the value being searched is equal to the root, then the root is returned
         else if (root->val == val) {
             return root;
         }
         
+        // recursively calls search function to search the left node if the value being searched is less than the current node
         else if (root->val > val) {
             return searchBST(root->left, val);
         }
         
+        // recursively calls search function to search the right node if the value being search is greater than the current node
         else {
             return searchBST(root->right, val);
         }
