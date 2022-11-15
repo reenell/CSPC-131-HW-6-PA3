@@ -15,6 +15,6 @@ public:
         if (root == nullptr) return 0;
         int x = maxDepth(root -> left);
         int y = maxDepth(root -> right);
-        return max(x, y) + 1;
+        return std::max(x, y) + 1;
     }
 };
