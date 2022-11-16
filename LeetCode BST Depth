@@ -12,7 +12,12 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
+        // if there is no root, then the depth of the tree is 0
         if (root == nullptr) return 0;
+        
+        //x and y variables are created which represent the recursive maxDepth function for the left and right side of the subtrees
+        //std::max is used to compare these two recursive functions, taking the value of the side which has the most depth
+        //and adding 1 to account for the root level
         int x = maxDepth(root -> left);
         int y = maxDepth(root -> right);
         return std::max(x, y) + 1;
