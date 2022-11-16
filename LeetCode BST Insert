@@ -27,7 +27,7 @@ public:
     //if the current root is less than the value being inserted into the tree
     else {
       root->right = insertIntoBST(root->right, val);
-    }
+    } 
 
     return root;
   }
